@@ -17,7 +17,13 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = with pkgs; [ zsh-powerlevel10k meslo-lgs-nf gh git git-credential-manager ];
+  home.packages = with pkgs; [
+      zsh-powerlevel10k
+      meslo-lgs-nf
+      gh
+      git
+      git-credential-manager
+    ];
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -57,7 +63,7 @@
   programs.home-manager.enable = true;
   programs.zsh = {
       enable = true;
-      initExtra = "source ~/.p10k.zsh";
+      #initExtra = "source ~/.p10k.zsh";
       plugins = [
         {
           name = "zsh-autosuggestions";
